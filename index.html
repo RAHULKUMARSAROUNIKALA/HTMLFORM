@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form2</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        body{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            animation-name:change;
+            animation-duration: 3s;
+            animation-timing-function:step(6);
+            animation-delay: 0s;
+            animation-iteration-count:infinite;
+            animation-direction:alternate-reverse;
+            background:lime;
+            font-size: 2rem;
+            
+        }
+        @keyframes change{
+            0%{background:red;}
+            10%{background:blue;}
+            20%{background:green;}
+            30%{background:yellow;}
+            40%{background:purple;}
+            50%{background:orangered;}
+            60%{background:darkgreen;}
+            70%{background:lightskyblue;}
+
+        }
+        .form input{
+            padding:0.3rem;
+            margin:0.3rem 0.5rem;
+            border-radius:0.5rem;
+            background:#2c3e50;;
+            border:0.1rem solid rgb(27, 233, 27); 
+            width:30rem;
+            height:3rem;
+            font-size:2.4rem;
+            color:darkorange;
+            text-align: center;
+            text-transform:capitalize ;
+            
+        }
+        .form input:focus  ~ label{
+            top:1rem;
+        }
+        label{
+            position:absolute;
+            transition: top .5s;
+            
+            color:white;
+            background:#2c3e50;
+            font-size:1.5rem;
+            text-align: center;
+            
+            
+
+        }
+        
+    
+        @media(max-length:998px){
+           html{
+             font-size:55%;
+           }
+         }
+         @media(max-width:768px){
+           html{
+             font-size:45%;
+           }
+         }
+         .dom{
+              
+             
+             text-align:center;
+            
+         }
+         .dom input{
+            background:lightslategrey;
+            border:3px solid green; 
+         }
+
+        div h3{
+            text-align:center;
+            border:2px solid green;
+            background:yellow;
+            animation:sample 2s linear 1s infinite alternate-reverse; 
+        }
+        @keyframes sample{
+            0%{
+                border-radius:0%;
+            }
+            50%{border-radius:50%; background:darkmagenta;color:red;font-weight: bold;}
+        }
+
+        
+    </style>
+</head>
+<body>
+    <form>
+    <div class="form">
+        <h3>Registration form</h3>
+    <input type="text" name="fname" maxlength="20" required>
+    <label style=" top:4.4rem; text-indent: -56rem;">Name:</label><br>
+
+    <input type="text" name="fathername" maxlength="20" required>
+    <label  style=" top:8.7rem; text-indent:-52rem;">Father Name:</label><br> 
+
+    <input type="text" name="mothername" maxlength="20" required>
+    <label  style=" top:13.4rem; text-indent: -52rem;">Mother Name:</label><br>
+
+    <input type="text" name="age" maxlength="2" required>
+    <label style=" top:17.5rem; text-indent: -58rem;" >Age:</label><br>
+
+    <input type="email" name="email" required style="text-transform: none;">
+    <label  style=" top:22.2rem; text-indent: -57rem;">Email:</label><br>
+
+    <input type="text" name="number" maxlength="10" required>
+    <label  style=" top:26.3rem; text-indent: -56rem;">Number:</label><br>
+     
+    <label style=" text-indent: 1rem; width:6rem;background:none;top: 30rem;font-size: 2.5rem;">Gender:</label>
+    <input type="radio" name="gender" required><label  style="text-indent:-15rem; font-size: 2.5rem; top:30.1rem;">Male</label>
+    <input type="radio"name="gender" required><label  style="text-indent:-15rem; font-size: 2.5rem; top:30.1rem;">Female</label><br>
+
+    <input type="date" name="dob" required>
+    <label  style=" top:34.6rem; text-indent: -52rem;">Date Of Birth</label><br>
+    <label style="text-indent:1rem; background:none; top:42rem; font-size:2.5rem;">Hobbies:</label><br>
+    <input type="checkbox" name="singing">Singing
+    <input type="checkbox" name="dancing" >Dancing
+    <input type="checkbox" name="Playing"  >Playing
+    <input type="checkbox" name="reading" >Reading<br>
+    <span style="background:none;text-indent:1rem; font-size:2.5rem;">Qualification:</span><br>
+    <select>
+        <option type="none">none</option>
+        <option type="Diploma">Diploma</option>
+        <option type="B.tech">B.tech</option>
+        <option type="Matric">Matric</option>
+        <option type="Enter">Enter</option>
+        <option type="Other">Other</option>
+    </select><br>
+
+    <div class="dom">
+        <input type="submit" value="Submit" style="width:8.2rem; height:3.4rem;" >
+        <input type="reset" value="Reset" style="width:7.3rem; height:3.4rem; ">
+    </div>
+    </div>
+    </form>
+</body>
+</html>
